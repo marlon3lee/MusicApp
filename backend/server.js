@@ -1,11 +1,13 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
-const { errorHandler } = require('./middleware/errorMiddleware.js')
+const { errorHandler } = require('./middleware/errorMiddleware')
+const connectDB = require('./config/db')
 
 const port = process.env.port || 5000
 
-const app = express()
+connectDB()
 
+const app = express()
 
 // middleware to recognize incoming request as json object or strings/arrays
 app.use(express.json())
