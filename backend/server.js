@@ -16,6 +16,8 @@ app.use(express.urlencoded({extended: false})) // parsing the URL-encoded data w
 // loading artists router module into app
 app.use('/artists', require('./routes/artistsRoutes'))
 
+app.use('/users', require('./routes/userRoutes'))
+
 app.use(errorHandler)
 
 app.listen(port, () => console.log(`server started on port ${port}`))
