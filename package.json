@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node run backend/server.js",
-    "server": "nodemon run backend/server.js"
+    "server": "nodemon run backend/server.js",
+    "client": "npm start --prefix frontend"
   },
   "author": "Marlon",
   "license": "ISC",
